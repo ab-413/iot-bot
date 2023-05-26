@@ -1,0 +1,6 @@
+__pycache__
+logs
+venv
+.gitignore
+docker-compose.yaml
+test.py
