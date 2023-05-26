@@ -15,7 +15,7 @@ def utc_to_local(utc_dt, hours):
 
 
 def getUserState(chat_id):
-    r = requests.get(settings.BASE_URL+settings.get_tg_users +
+    r = requests.get(settings.BASE_URL + settings.get_tg_users +
                      str(chat_id), headers=settings.master_token)
     responce = r.json()
     user_id = json.loads(json.dumps(responce['id']))
@@ -28,7 +28,7 @@ def getUserState(chat_id):
 
 
 def getUserID(chat_id):
-    r = requests.get(settings.BASE_URL+settings.get_tg_users +
+    r = requests.get(settings.BASE_URL + settings.get_tg_users +
                      str(chat_id), headers=settings.master_token)
     responce = r.json()
     user_id = json.loads(json.dumps(responce['id']))
@@ -37,7 +37,7 @@ def getUserID(chat_id):
 
 
 def getData(user_id):
-    r = requests.get(settings.BASE_URL+settings.get_data +
+    r = requests.get(settings.BASE_URL + settings.get_data +
                      str(user_id), headers=settings.master_token)
     responce = r.json()
     data = json.loads(json.dumps(responce[0]['data']))
